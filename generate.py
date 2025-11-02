@@ -32,6 +32,8 @@ def parse_markdown_file(filepath):
     title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
     if title_match:
         title = title_match.group(1)
+        # Remove the title from content to avoid duplication
+        content = re.sub(r'^#\s+.+$', '', content, count=1, flags=re.MULTILINE).lstrip()
     else:
         title = Path(filepath).stem.replace('-', ' ').replace('_', ' ').title()
     
