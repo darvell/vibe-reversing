@@ -86,6 +86,13 @@ To enable GitHub Pages for your fork:
 2. Set Source to "GitHub Actions"
 3. The workflow will automatically deploy on the next push
 
+### Custom Domain (Optional)
+
+To use a custom domain:
+1. Add a `CNAME` file to the `docs/` directory with your domain name
+2. Configure your DNS provider to point to GitHub Pages
+3. Enable "Enforce HTTPS" in repository settings
+
 ## License
 
 Open for educational purposes.
